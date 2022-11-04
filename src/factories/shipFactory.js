@@ -1,4 +1,4 @@
-const shipFactory = (length, hits, sunk) => {
+const shipFactory = (length, hits, sunk, coord = []) => {
   const hit = () => shipFactory(length, hits + 1, sunk);
   const isSunk = () => {
     if (hits === length) {
@@ -7,7 +7,7 @@ const shipFactory = (length, hits, sunk) => {
     return shipFactory(length, hits, false);
   };
   return {
-    length, hits, sunk, hit, isSunk,
+    length, hits, sunk, coord, hit, isSunk,
   };
 };
 
