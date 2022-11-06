@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship</title>
+</head>
+<body>
+  <h1>Battleship</h1>
+  <div class="container">
+    <div id="my-board">
+      <div class="row">
+        <div id="00"></div><div id="01"></div><div id="02"></div><div id="03"></div><div id="04"></div>
+        <div id="05"></div><div id="06"></div><div id="07"></div><div id="08"></div><div id="09"></div>
+      </div>
+      <div class="row">
+        <div id="10"></div><div id="11"></div><div id="12"></div><div id="13"></div><div id="14"></div>
+        <div id="15"></div><div id="16"></div><div id="17"></div><div id="18"></div><div id="19"></div>
+      </div>
+      <div class="row">
+        <div id="20"></div><div id="21"></div><div id="22"></div><div id="23"></div><div id="24"></div>
+        <div id="25"></div><div id="26"></div><div id="27"></div><div id="28"></div><div id="29"></div>
+      </div>
+      <div class="row">
+        <div id="30"></div><div id="31"></div><div id="32"></div><div id="33"></div><div id="34"></div>
+        <div id="35"></div><div id="36"></div><div id="37"></div><div id="38"></div><div id="39"></div>
+      </div>
+      <div class="row">
+        <div id="40"></div><div id="41"></div><div id="42"></div><div id="43"></div><div id="44"></div>
+        <div id="45"></div><div id="46"></div><div id="47"></div><div id="48"></div><div id="49"></div>
+      </div>
+      <div class="row">
+        <div id="50"></div><div id="51"></div><div id="52"></div><div id="53"></div><div id="54"></div>
+        <div id="55"></div><div id="56"></div><div id="57"></div><div id="58"></div><div id="59"></div>
+      </div>
+      <div class="row">
+        <div id="60"></div><div id="61"></div><div id="62"></div><div id="63"></div><div id="64"></div>
+        <div id="65"></div><div id="66"></div><div id="67"></div><div id="68"></div><div id="69"></div>
+      </div>
+      <div class="row">
+        <div id="70"></div><div id="71"></div><div id="72"></div><div id="73"></div><div id="74"></div>
+        <div id="75"></div><div id="76"></div><div id="77"></div><div id="78"></div><div id="79"></div>
+      </div>
+      <div class="row" >
+        <div id="80"></div><div id="81"></div><div id="82"></div><div id="83"></div><div id="84"></div>
+        <div id="85"></div><div id="86"></div><div id="87"></div><div id="88"></div><div id="89"></div>
+      </div>
+      <div class="row">
+        <div id="90"></div><div id="91"></div><div id="92"></div><div id="93"></div><div id="94"></div>
+        <div id="95"></div><div id="96"></div><div id="97"></div><div id="98"></div><div id="99"></div>
+      </div>
+    </div>
+    <div id="enemy-board">
+      <div class="row">
+        <div id="00c"></div><div id="01c"></div><div id="02c"></div><div id="03c"></div><div id="04c"></div>
+        <div id="05c"></div><div id="06c"></div><div id="07c"></div><div id="08c"></div><div id="09c"></div>
+      </div>
+      <div class="row">
+        <div id="10c"></div><div id="11c"></div><div id="12c"></div><div id="13c"></div><div id="14c"></div>
+        <div id="15c"></div><div id="16c"></div><div id="17c"></div><div id="18c"></div><div id="19c"></div>
+      </div>
+      <div class="row">
+        <div id="20c"></div><div id="21c"></div><div id="22c"></div><div id="23c"></div><div id="24c"></div>
+        <div id="25c"></div><div id="26c"></div><div id="27c"></div><div id="28c"></div><div id="29c"></div>
+      </div>
+      <div class="row">
+        <div id="30c"></div><div id="31c"></div><div id="32c"></div><div id="33c"></div><div id="34c"></div>
+        <div id="35c"></div><div id="36c"></div><div id="37c"></div><div id="38c"></div><div id="39c"></div>
+      </div>
+      <div class="row">
+        <div id="40c"></div><div id="41c"></div><div id="42c"></div><div id="43c"></div><div id="44c"></div>
+        <div id="45c"></div><div id="46c"></div><div id="47c"></div><div id="48c"></div><div id="49c"></div>
+      </div>
+      <div class="row">
+        <div id="50c"></div><div id="51c"></div><div id="52c"></div><div id="53c"></div><div id="54c"></div>
+        <div id="55c"></div><div id="56c"></div><div id="57c"></div><div id="58c"></div><div id="59c"></div>
+      </div>
+      <div class="row">
+        <div id="60c"></div><div id="61c"></div><div id="62c"></div><div id="63c"></div><div id="64c"></div>
+        <div id="65c"></div><div id="66c"></div><div id="67c"></div><div id="68c"></div><div id="69c"></div>
+      </div>
+      <div class="row">
+        <div id="70c"></div><div id="71c"></div><div id="72c"></div><div id="73c"></div><div id="74c"></div>
+        <div id="75c"></div><div id="76c"></div><div id="77c"></div><div id="78c"></div><div id="79c"></div>
+      </div>
+      <div class="row">
+        <div id="80c"></div><div id="81c"></div><div id="82c"></div><div id="83c"></div><div id="84c"></div>
+        <div id="85c"></div><div id="86c"></div><div id="87c"></div><div id="88c"></div><div id="89c"></div>
+      </div>
+      <div class="row">
+        <div id="90c"></div><div id="91c"></div><div id="92c"></div><div id="93c"></div><div id="94c"></div>
+        <div id="95c"></div><div id="96c"></div><div id="97c"></div><div id="98c"></div><div id="99c"></div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
