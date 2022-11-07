@@ -1,13 +1,11 @@
-const playerFactory = (turn) => {
-  const visited = [];
+const playerFactory = (turn, visited = []) => {
   const randomNum = () => Math.floor(Math.random() * 100);
 
   const changeTurn = () => {
     if (turn) {
-      turn = false;
-    } else {
-      turn = true;
+      return playerFactory(false, visited);
     }
+    return playerFactory(true, visited);
   };
 
   const computerTurn = () => {
