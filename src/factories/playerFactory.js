@@ -1,4 +1,8 @@
 const playerFactory = (turn, visited = []) => {
+  const addToVisited = (value) => {
+    visited.push(value);
+  };
+
   const randomNum = () => Math.floor(Math.random() * 100);
 
   const changeTurn = () => {
@@ -18,7 +22,7 @@ const playerFactory = (turn, visited = []) => {
   };
 
   return {
-    turn, visited, changeTurn, computerTurn,
+    turn, visited, changeTurn, computerTurn, addToVisited,
   };
 };
 
