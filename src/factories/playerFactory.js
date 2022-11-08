@@ -1,4 +1,4 @@
-const playerFactory = (turn, visited = []) => {
+const playerFactory = (turn, visited = [], compVisited = []) => {
   const addToVisited = (value) => {
     visited.push(value);
   };
@@ -17,12 +17,12 @@ const playerFactory = (turn, visited = []) => {
     while (visited.includes(playCoord)) {
       playCoord = randomNum();
     }
-    visited.push(playCoord);
+    compVisited.push(playCoord);
     return playCoord;
   };
 
   return {
-    turn, visited, changeTurn, computerTurn, addToVisited,
+    turn, visited, compVisited, changeTurn, computerTurn, addToVisited,
   };
 };
 
