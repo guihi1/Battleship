@@ -14,8 +14,11 @@ const playerFactory = (turn, visited = [], compVisited = []) => {
 
   const computerTurn = () => {
     let playCoord = randomNum();
-    while (visited.includes(playCoord)) {
-      playCoord = randomNum();
+    while (compVisited.includes(playCoord)) {
+      playCoord += 1;
+      if (playCoord > 99) {
+        playCoord = 0;
+      }
     }
     compVisited.push(playCoord);
     return playCoord;
