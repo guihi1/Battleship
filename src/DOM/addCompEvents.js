@@ -1,4 +1,5 @@
 import boardFactory from '../factories/boardFactory';
+import addPlayerEvents from './addPlayerEvents';
 
 const compBoardSquares = document.querySelectorAll('.row-c > div');
 const compBoard = boardFactory();
@@ -11,6 +12,7 @@ const onClick = (evt) => {
     evt.currentTarget.classList.add('hit');
   }
   evt.currentTarget.removeEventListener('click', onClick);
+  addPlayerEvents();
 };
 
 //  Add event listeners to computer board
