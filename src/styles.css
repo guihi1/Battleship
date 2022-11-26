@@ -8,7 +8,7 @@
   display: flex;
 }
 
-.row > div {
+.row > div, .row-c > div {
   height: 25px;
   width: 25px;
   border: 1px solid black;
@@ -22,4 +22,40 @@ h1 {
 .container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.hit {
+  background-color: black;
+}
+
+.missed {
+  background-color: gray;
+}
+
+#page-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: gray;
 }
