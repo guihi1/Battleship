@@ -1,8 +1,8 @@
 import shipFactory from './shipFactory';
 
 const boardFactory = () => {
-  const board = [];
-  const ships = [];
+  let board = [];
+  let ships = [];
   for (let i = 0; i < 100; i += 1) {
     board.push(null);
   }
@@ -29,11 +29,11 @@ const boardFactory = () => {
 
   const receiveAttack = (coord) => {
     if (board[coord] === 'S') {
+      board[coord] = 'H';
       for (let i = 0; i < ships.length; i += 1) {
         for (let j = 0; j < ships[i].coord.length; j += 1) {
           if (ships[i].coord[j] === coord) {
             ships[i] = ships[i].hit();
-            board[coord] = 'H';
           }
         }
       }
@@ -56,8 +56,13 @@ const boardFactory = () => {
     return false;
   };
 
+  const boardReset = () => {
+    board = [];
+    ships = [];
+  };
+
   return {
-    board, ships, placeShips, receiveAttack, allSunk, atkMiss,
+    board, ships, placeShips, receiveAttack, allSunk, atkMiss, boardReset,
   };
 };
 
