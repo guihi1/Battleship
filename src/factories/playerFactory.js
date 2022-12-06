@@ -24,8 +24,17 @@ const playerFactory = (turn, visited = [], compVisited = []) => {
     return playCoord;
   };
 
+  const playerReset = () => {
+    for (let i = 0; i < visited.length; i += 1) {
+      visited.pop();
+    }
+    for (let j = 0; j < compVisited.length; j += 1) {
+      compVisited.pop();
+    }
+  };
+
   return {
-    turn, visited, compVisited, changeTurn, computerTurn, addToVisited,
+    turn, visited, compVisited, changeTurn, computerTurn, addToVisited, playerReset,
   };
 };
 
