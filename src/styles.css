@@ -38,8 +38,6 @@ h1 {
   right: 0;
   bottom: 0;
   top: 0;
-  opacity: 0;
-  visibility: hidden;
   color: white;
   background-color: black;
   display: flex;
@@ -47,6 +45,14 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
 
 button {
