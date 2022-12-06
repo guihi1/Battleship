@@ -7,12 +7,16 @@
   <title>Battleship</title>
 </head>
 <body>
+  <div id="page-mask" class="hide">
+    <h1 id="winner"></h1>
+    <button id="restart" class="restart">Play again</button>
+  </div>
   <h1>Battleship</h1>
   <div class="container">
     <div id="my-board">
       <div class="row">
-        <div id="00"></div><div id="01"></div><div id="02"></div><div id="03"></div><div id="04"></div>
-        <div id="05"></div><div id="06"></div><div id="07"></div><div id="08"></div><div id="09"></div>
+        <div id="0"></div><div id="1"></div><div id="2"></div><div id="3"></div><div id="4"></div>
+        <div id="5"></div><div id="6"></div><div id="7"></div><div id="8"></div><div id="9"></div>
       </div>
       <div class="row">
         <div id="10"></div><div id="11"></div><div id="12"></div><div id="13"></div><div id="14"></div>
@@ -52,43 +56,43 @@
       </div>
     </div>
     <div id="enemy-board">
-      <div class="row">
-        <div id="00c"></div><div id="01c"></div><div id="02c"></div><div id="03c"></div><div id="04c"></div>
-        <div id="05c"></div><div id="06c"></div><div id="07c"></div><div id="08c"></div><div id="09c"></div>
+      <div class="row-c">
+        <div id="0c"></div><div id="1c"></div><div id="2c"></div><div id="3c"></div><div id="4c"></div>
+        <div id="5c"></div><div id="6c"></div><div id="7c"></div><div id="8c"></div><div id="9c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="10c"></div><div id="11c"></div><div id="12c"></div><div id="13c"></div><div id="14c"></div>
         <div id="15c"></div><div id="16c"></div><div id="17c"></div><div id="18c"></div><div id="19c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="20c"></div><div id="21c"></div><div id="22c"></div><div id="23c"></div><div id="24c"></div>
         <div id="25c"></div><div id="26c"></div><div id="27c"></div><div id="28c"></div><div id="29c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="30c"></div><div id="31c"></div><div id="32c"></div><div id="33c"></div><div id="34c"></div>
         <div id="35c"></div><div id="36c"></div><div id="37c"></div><div id="38c"></div><div id="39c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="40c"></div><div id="41c"></div><div id="42c"></div><div id="43c"></div><div id="44c"></div>
         <div id="45c"></div><div id="46c"></div><div id="47c"></div><div id="48c"></div><div id="49c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="50c"></div><div id="51c"></div><div id="52c"></div><div id="53c"></div><div id="54c"></div>
         <div id="55c"></div><div id="56c"></div><div id="57c"></div><div id="58c"></div><div id="59c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="60c"></div><div id="61c"></div><div id="62c"></div><div id="63c"></div><div id="64c"></div>
         <div id="65c"></div><div id="66c"></div><div id="67c"></div><div id="68c"></div><div id="69c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="70c"></div><div id="71c"></div><div id="72c"></div><div id="73c"></div><div id="74c"></div>
         <div id="75c"></div><div id="76c"></div><div id="77c"></div><div id="78c"></div><div id="79c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="80c"></div><div id="81c"></div><div id="82c"></div><div id="83c"></div><div id="84c"></div>
         <div id="85c"></div><div id="86c"></div><div id="87c"></div><div id="88c"></div><div id="89c"></div>
       </div>
-      <div class="row">
+      <div class="row-c">
         <div id="90c"></div><div id="91c"></div><div id="92c"></div><div id="93c"></div><div id="94c"></div>
         <div id="95c"></div><div id="96c"></div><div id="97c"></div><div id="98c"></div><div id="99c"></div>
       </div>
