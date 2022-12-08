@@ -14,3 +14,10 @@ test('Computer turn', () => {
   }
   expect(player1.computerTurn()).toBe(99);
 });
+
+test('Player reset', () => {
+  player1.visited.push(99);
+  expect(player1.visited).toEqual([99]);
+  player1.playerReset();
+  expect(player1.visited).toEqual([]);
+});
