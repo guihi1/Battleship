@@ -10,7 +10,6 @@ const mask = document.getElementById('page-mask');
 
 const playAgain = document.querySelector('.restart');
 playAgain.addEventListener('click', () => {
-  playerBoard.boardReset();
   mask.classList.remove('show');
   mask.classList.add('hide');
   for (let i = 0; i < playerBoardSquares.length; i += 1) {
