@@ -44,6 +44,7 @@ const boardFactory = () => {
 
   const allSunk = () => {
     let sunkShips = 0;
+    if (ships.length === 0) return false;
     for (let i = 0; i < ships.length; i += 1) {
       if (ships[i].isSunk().sunk) {
         ships[i] = ships[i].isSunk();
@@ -59,6 +60,9 @@ const boardFactory = () => {
   const boardReset = () => {
     while (board.length > 0) {
       board.pop();
+    }
+    for (let i = 0; i < 100; i += 1) {
+      board.push(null);
     }
     while (ships.length > 0) {
       ships.pop();
