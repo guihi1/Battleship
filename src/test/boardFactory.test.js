@@ -50,3 +50,13 @@ test('Test allSunk function', () => {
   newBoard.receiveAttack(45);
   expect(newBoard.allSunk()).toBeTruthy();
 });
+
+test('Board reset', () => {
+  newBoard.boardReset();
+  expect(newBoard.allSunk()).toBeFalsy();
+  newBoard.placeShips(3, 21, 'horizontal');
+  newBoard.receiveAttack(21);
+  newBoard.receiveAttack(22);
+  newBoard.receiveAttack(23);
+  expect(newBoard.allSunk()).toBeTruthy();
+});
