@@ -25,11 +25,8 @@ const playerFactory = (turn, visited = [], compVisited = []) => {
   };
 
   const playerReset = () => {
-    for (let i = 0; i < visited.length; i += 1) {
+    while (visited.length > 0) {
       visited.pop();
-    }
-    for (let j = 0; j < compVisited.length; j += 1) {
-      compVisited.pop();
     }
   };
 
