@@ -1,8 +1,8 @@
 import shipFactory from './shipFactory';
 
 const boardFactory = () => {
-  let board = [];
-  let ships = [];
+  const board = [];
+  const ships = [];
   for (let i = 0; i < 100; i += 1) {
     board.push(null);
   }
@@ -57,8 +57,12 @@ const boardFactory = () => {
   };
 
   const boardReset = () => {
-    board = [];
-    ships = [];
+    while (board.length > 0) {
+      board.pop();
+    }
+    while (ships.length > 0) {
+      ships.pop();
+    }
   };
 
   return {
