@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Anton, sans-serif;
 }
 
 #my-board, #enemy-board {
@@ -32,7 +33,7 @@ h1 {
   background-color: gray;
 }
 
-#page-mask {
+#page-mask, #start-page {
   position: fixed;
   left: 0;
   right: 0;
@@ -45,6 +46,10 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+#start-page {
+  gap: 10px;
 }
 
 .hide {
@@ -64,4 +69,19 @@ button {
 
 button:hover {
   background-color: gray;
+}
+
+fieldset {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+label {
+  font-size: 70%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
 }
