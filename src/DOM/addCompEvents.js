@@ -6,14 +6,18 @@ const compBoardSquares = document.querySelectorAll('.row-c > div');
 const compBoard = boardFactory();
 const hasEvents = [];
 
+for (let i = 0; i < compBoardSquares.length; i += 1) {
+  compBoardSquares[i].classList.add('default');
+}
+
 const onClick = (evt) => {
   compBoard.receiveAttack(evt.currentTarget.index);
   evt.currentTarget.visited.push(evt.currentTarget.index);
-  if (compBoard.board[evt.currentTarget.index] === 'M') {
-    evt.currentTarget.classList.add('missed');
-  } else if (compBoard.board[evt.currentTarget.index] === 'H') {
+  if (compBoard.board[evt.currentTarget.index] === 'H') {
     evt.currentTarget.classList.add('hit');
+    evt.currentTarget.classList.remove('default');
   }
+  evt.currentTarget.textContent = '✖';
   evt.currentTarget.removeEventListener('click', onClick);
   hasEvents[evt.currentTarget.index] = false;
   if (compBoard.allSunk()) {
