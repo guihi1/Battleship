@@ -8,19 +8,19 @@ start.addEventListener('click', () => {
   startPage.classList.add('hide');
   const carPos = document.getElementById('car-square').value;
   const carDir = document.getElementById('car-dir').value;
-  playerBoard.placeShips(5, carPos, carDir);
+  playerBoard.placeShips(5, Number(carPos), carDir);
   const batPos = document.getElementById('bat-square').value;
   const batDir = document.getElementById('bat-dir').value;
-  playerBoard.placeShips(4, batPos, batDir);
+  playerBoard.placeShips(4, Number(batPos), batDir);
   const cruPos = document.getElementById('cru-square').value;
   const cruDir = document.getElementById('cru-dir').value;
-  playerBoard.placeShips(3, cruPos, cruDir);
+  playerBoard.placeShips(3, Number(cruPos), cruDir);
   const subPos = document.getElementById('sub-square').value;
   const subDir = document.getElementById('sub-dir').value;
-  playerBoard.placeShips(3, subPos, subDir);
+  playerBoard.placeShips(3, Number(subPos), subDir);
   const desPos = document.getElementById('des-square').value;
   const desDir = document.getElementById('des-dir').value;
-  playerBoard.placeShips(2, desPos, desDir);
+  playerBoard.placeShips(2, Number(desPos), desDir);
 });
 
 compBoard.placeShips(5, 0);
@@ -47,6 +47,5 @@ playAgain.addEventListener('click', () => {
   compBoard.placeShips(3, 2);
   compBoard.placeShips(3, 3);
   compBoard.placeShips(2, 4);
-  console.log(player);
   addCompEvents(player);
 });
