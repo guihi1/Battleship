@@ -2,13 +2,11 @@ import boardFactory from '../factories/boardFactory';
 import playerFactory from '../factories/playerFactory';
 import gameEnd from './gameEnd';
 
-let turn = true;
-const player = playerFactory(turn);
+const player = playerFactory(true);
 const playerBoardSquares = document.querySelectorAll('.row > div');
 const playerBoard = boardFactory();
 const mask = document.getElementById('page-mask');
 const startPage = document.getElementById('start-page');
-const start = document.getElementById('start');
 
 const showPlayerShips = () => {
   for (let k = 0; k < playerBoardSquares.length; k += 1) {
