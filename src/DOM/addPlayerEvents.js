@@ -7,7 +7,17 @@ const player = playerFactory(turn);
 const playerBoardSquares = document.querySelectorAll('.row > div');
 const playerBoard = boardFactory();
 const mask = document.getElementById('page-mask');
-const start = document.getElementById('start-page');
+const startPage = document.getElementById('start-page');
+const start = document.getElementById('start');
+
+const showPlayerShips = () => {
+  for (let k = 0; k < playerBoardSquares.length; k += 1) {
+    if (playerBoard.board[k] === 'S') {
+      playerBoardSquares[k].classList.add('hit');
+      playerBoardSquares[k].classList.remove('default');
+    }
+  }
+};
 
 for (let i = 0; i < playerBoardSquares.length; i += 1) {
   playerBoardSquares[i].classList.add('default');
@@ -17,7 +27,7 @@ const playAgain = document.querySelector('.restart');
 playAgain.addEventListener('click', () => {
   mask.classList.remove('show');
   mask.classList.add('hide');
-  start.classList.remove('hide');
+  startPage.classList.remove('hide');
   for (let i = 0; i < playerBoardSquares.length; i += 1) {
     playerBoardSquares[i].classList.remove('hit');
     playerBoardSquares[i].textContent = '';
@@ -51,4 +61,4 @@ const addPlayerEvents = () => {
 };
 
 export default addPlayerEvents;
-export { playerBoard, player };
+export { playerBoard, player, showPlayerShips };
