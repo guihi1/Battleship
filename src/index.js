@@ -1,6 +1,6 @@
 import './styles.css';
 import addCompEvents, { compBoard } from './DOM/addCompEvents';
-import { playerBoard, player } from './DOM/addPlayerEvents';
+import { playerBoard, player, showPlayerShips } from './DOM/addPlayerEvents';
 
 const startPage = document.getElementById('start-page');
 const start = document.getElementById('start');
@@ -58,15 +58,15 @@ start.addEventListener('click', () => {
     playerBoard.placeShips(3, Number(cruPos), cruDir);
     playerBoard.placeShips(3, Number(subPos), subDir);
     playerBoard.placeShips(2, Number(desPos), desDir);
+    showPlayerShips();
+    compBoard.placeShips(5, 0);
+    compBoard.placeShips(4, 1);
+    compBoard.placeShips(3, 2);
+    compBoard.placeShips(3, 3);
+    compBoard.placeShips(2, 4);
     startPage.classList.add('hide');
   }
 });
-
-compBoard.placeShips(5, 0);
-compBoard.placeShips(4, 1);
-compBoard.placeShips(3, 2);
-compBoard.placeShips(3, 3);
-compBoard.placeShips(2, 4);
 
 addCompEvents(player);
 
@@ -75,16 +75,5 @@ playAgain.addEventListener('click', () => {
   player.playerReset();
   playerBoard.boardReset();
   compBoard.boardReset();
-  playerBoard.placeShips(5, 0, 'horizontal');
-  playerBoard.placeShips(4, 31, 'vertical');
-  playerBoard.placeShips(3, 50, 'horizontal');
-  playerBoard.placeShips(3, 73, 'vertical');
-  playerBoard.placeShips(2, 89, 'horizontal');
-
-  compBoard.placeShips(5, 0);
-  compBoard.placeShips(4, 1);
-  compBoard.placeShips(3, 2);
-  compBoard.placeShips(3, 3);
-  compBoard.placeShips(2, 4);
   addCompEvents(player);
 });
